@@ -1,0 +1,22 @@
+# SDG indicator code + FAO/UN “series code” used by FAO SDG SDMX dataset
+# (edit this list to control exactly what the assistant is allowed to use)
+
+- sdg_indicator: "2.1.1"
+  series_code: "SN_ITK_DEFC"
+  name: "Prevalence of undernourishment (% of population)"
+  tags: ["food security", "hunger", "nutrition"]
+
+- sdg_indicator: "2.1.2"
+  series_code: "AG_PRD_FIESMS"
+  name: "Prevalence of moderate or severe food insecurity (FIES)"
+  tags: ["food insecurity", "vulnerability", "access"]
+
+- sdg_indicator: "2.4.1"
+  series_code: "AG_LND_SUST"
+  name: "Proportion of agricultural area under productive and sustainable agriculture"
+  tags: ["sustainable agriculture", "land", "resilience"]
+
+- sdg_indicator: "2.c.1"
+  series_code: "AG_FPA_CFPI"
+  name: "Indicator of food price anomalies (consumer food price index)"
+  tags: ["food prices", "volatility", "markets"]
