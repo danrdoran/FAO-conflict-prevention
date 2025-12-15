@@ -6,6 +6,8 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+import os 
+
 ROOT = Path(__file__).resolve().parents[1]   # …/FAO-conflict-prevention
 sys.path.insert(0, str(ROOT / "src"))        # add …/FAO-conflict-prevention/src
 
