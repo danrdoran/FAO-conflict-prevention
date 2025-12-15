@@ -76,12 +76,7 @@ with tab1:
         # st.markdown("### Plan")
         # st.write(result.plan)
 
-        st.markdown("### Data")
-        if result.data is None or result.data.empty:
-            st.warning("No data returned.")
-        else:
-            st.dataframe(result.data, use_container_width=True)
-
+        
         st.markdown("### Chart")
         if result.chart_path and Path(result.chart_path).exists():
             st.image(result.chart_path, use_container_width=True)
@@ -90,6 +85,12 @@ with tab1:
 
         st.markdown("### Narrative")
         st.write(result.narrative)
+
+        st.markdown("### Data")
+        if result.data is None or result.data.empty:
+            st.warning("No data returned.")
+        else:
+            st.dataframe(result.data, use_container_width=True)
 
 
 with tab2:
