@@ -9,12 +9,16 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parents[1]   # …/FAO-conflict-prevention
 sys.path.insert(0, str(ROOT / "src"))        # add …/FAO-conflict-prevention/src
 
+
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
 from agents.sdg_agent import SDGResearchAgent
 from clients.fao_sdg_client import FAOSDGClient
 from rag.ag_policy_rag import AgriculturalPolicyRAGAssistant, PathwaysIndex, load_indicator_catalog
 
 
-st.set_page_config(page_title="Ag SDG + Conflict Prevention Policy Assistant", layout="wide")
+st.set_page_config(page_title="Agricultural SDG Policy Assistant for Conflict Prevention", layout="wide")
 
 st.title("Agricultural SDG Policy Assistant for Conflict Prevention")
 
