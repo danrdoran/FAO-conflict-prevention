@@ -7,12 +7,22 @@ from typing import Dict, List, Optional, Tuple
 
 import matplotlib.pyplot as plt
 import pandas as pd
+
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
+
 from openai import OpenAI
 
 from clients.fao_sdg_client import FAOSDGClient
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
+
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY not set. Put it in .env or export it.")
 
 # Initialize OpenAI client (expects OPENAI_API_KEY in the environment)
 client = OpenAI()
