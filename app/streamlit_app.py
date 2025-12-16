@@ -20,9 +20,9 @@ from clients.fao_sdg_client import FAOSDGClient
 from rag.ag_policy_rag import AgriculturalPolicyRAGAssistant, PathwaysIndex, load_indicator_catalog
 
 
-st.set_page_config(page_title="Agricultural SDG Policy Assistant for Conflict Prevention", layout="wide")
+st.set_page_config(page_title="Food Security Policy Assistant for Conflict Prevention", layout="wide")
 
-st.title("Agricultural SDG Policy Assistant for Conflict Prevention")
+st.title("Food Security Policy Assistant for Conflict Prevention")
 
 tab1, tab2 = st.tabs(["SDG Explorer", "Policy Assistant"])
 
