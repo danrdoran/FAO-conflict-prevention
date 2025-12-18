@@ -1,0 +1,41 @@
+# =============================================================================
+# .gcloudignore - Files to exclude from Cloud Run deployment
+# =============================================================================
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE files
+.idea/
+.vscode/
+
+# Local secrets (IMPORTANT: never upload secrets)
+.env
+.env.local
+.streamlit/secrets.toml
+
+# Test files
+tests/
+*_test.py
+test_*.py
+
+# Documentation
+DEPLOYMENT_GUIDE.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
